@@ -76,6 +76,8 @@ p {
   border-bottom: 1px solid #cc9933;
 }
 .card {
+  max-width: 550px;
+  min-width: 150px;
   background-color: #ffffff;
   border-radius: 12.0px;
   border: 0;
@@ -278,7 +280,7 @@ p {
 .numbers-btn:hover{
   background-color: #cc9933;
   color: #fff;
-  transition-duration: 4  00ms;
+  transition-duration: 400ms;
 }
 .accom-last-card {
   width: 100%;
