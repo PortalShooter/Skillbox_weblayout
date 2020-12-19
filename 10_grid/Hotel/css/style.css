@@ -183,8 +183,8 @@ p {
 .yellow {
   color: #cc9933;
 }
-
 .special-offer-block {
+  max-height: 515px;
   width: inherit;
   padding: 235px 190px 35px 40px;
   background: url(../img/luxury.jpg) no-repeat 100%;
