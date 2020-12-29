@@ -77,7 +77,6 @@ p {
 }
 .card {
   max-width: 550px;
-  min-width: 150px;
   background-color: #ffffff;
   border-radius: 12.0px;
   border: 0;
@@ -233,10 +232,12 @@ p {
 .services-card {
   margin-bottom: 25px;
 }
+
 .card-content {
   padding: 35px 80px 40px 45px;
 }
 .advantages-card {
+  max-width: 275px;
   height: 100%;
 }
 .advantages-icon {
@@ -248,6 +249,7 @@ p {
 }
 
 .accommodation-card {
+  max-width: 373px;
   margin-bottom: 25px;
 }
 .flex-card {
