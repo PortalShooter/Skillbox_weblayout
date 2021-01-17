@@ -2,6 +2,7 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 a {
+  display: inline-block;
   color: #333333;
   text-decoration: none;
 }
@@ -40,6 +41,7 @@ strong {
   color: #FFFFFF;
   font-weight: 700;
   font-size: 16px;
+  text-align: center;
 }
 .btn:hover {
   background: #ffc266;
@@ -277,7 +279,6 @@ header {
 }
 .question-item {
   display: flex;
-  height: 60px;
   justify-content: space-between;
   align-items: center;
   padding: 23px 0 30px 5px;
@@ -574,5 +575,198 @@ footer {
   }
   .footer-block-2 {
     margin-bottom: 58px;
+  }
+}
+@media (max-width: 320px) {
+  .container {
+    width: 290px !important;
+  }
+  .btn {
+    width: 160px;
+    padding: 11px 0 14px 0;
+    font-size: 12px;
+  }
+  h2 {
+    margin-top: 39px;
+    margin-bottom: 0;
+    font-size: 24px;
+    line-height: 29px;
+  }
+  p {
+    font-size: 14px;
+    line-height: 28px;
+  }
+  strong {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .header {
+    height: 45px;
+  }
+  .header-logo {
+    width: 100px;
+    margin-left: 0;
+    margin-right: auto;
+    order: -1;
+  }
+  .header-search {
+    display: none;
+  }
+  .hero {
+    width: 100%;
+    height: 100%;
+    padding: 32px 21px 40px 22px;
+    align-items: center;
+    text-align: center;
+  }
+  .hero-heading {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .hero-description {
+    margin-bottom: 34px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .aboutUs-text {
+    margin-bottom: 15px;
+  }
+  .aboutUs-img {
+    width: 290px;
+    height: 200px;
+    margin-bottom: 5px;
+  }
+  .aboutUs-mainBlock-info {
+    margin-bottom: 50px;
+    position: static;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    background: none;
+  }
+  .aboutUs-mainBlock-text {
+    margin-right: 0;
+    margin-bottom: 8px;
+    color:#333333;
+    font-weight: 400;
+  }
+  .aboutUs-btn {
+    border: 2px solid #FF9900;
+    color:#FF9900;
+  }
+  .aboutUs-second {
+    margin-top: 28px;
+    padding: 0;
+    flex-direction: column;
+    border: none;
+  }
+  .aboutUs-second-img {
+    width: 64px;
+    margin-bottom: 11px;
+  }
+  .aboutUs-second-1 {
+    margin-bottom: 17px;
+  }
+  .aboutUs-second-2 {
+    margin-top: 3px;
+  }
+
+  .work-heading{
+    margin-top: 46px;
+    margin-left: 0;
+    margin-bottom: 36px;
+  }
+  .work-buttons {
+    margin-bottom: 17px;
+  }
+  .work-btn {
+    margin: 0 !important;
+    font-size: 14px;
+  }
+  .work-img {
+    margin: 0;
+    margin-bottom: 8px;
+  }
+  .work-advice {
+    margin-left: 0;
+  }
+  .work-text {
+    margin-left: 0;
+    margin-bottom: 22px;
+  }
+  .btn-work-more {
+    margin-right: 10px;
+  }
+  .btn-work-contract{
+    width: 113px;
+  }
+
+  .question-heading {
+    margin-top: 36px;
+    margin-bottom: 0;
+  }
+  .question-item {
+    padding-top: 17px;
+    margin-left: -5px;
+  }
+  .question-item strong {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .question-item-btn {
+    width: 30px;
+    height: 30px;
+    padding: 5px 5px 6px 6px;
+  }
+  .question-item-btn img {
+    width: 19px;
+    height: 19px;
+  }
+
+  .footer-section {
+    padding-top: 39px;
+    padding-bottom: 24px;
+  }
+  .footer-logo {
+    width: 131px;
+    padding-left: 5px;
+    margin-bottom: 16px;
+  }
+  .footer-heading {
+    margin-bottom: 24px;
+  }
+  .footer-form {
+    padding-left: 0;
+    padding-bottom: 25px;
+    width: 100%;
+    border-bottom: 1px solid #595959;
+  }
+  .footer-input {
+    font-size: 14px;
+  }
+  .footer-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-btn {
+    margin: 11px auto;
+  }
+  .footer-block-1 {
+    margin: 0 auto;
+  }
+  .footer-block-2 {
+    margin-bottom: 23px;
+  }
+  .footer-icon {
+    width: 34px;
+  }
+  .footer-icon:not(:last-child){
+    margin-right: 14px;
   }
 }

@@ -53,6 +53,7 @@
       <div class="aboutUs-mainBlock">
         <picture>
           <source media="(max-width: 768px)" srcset="img/aboutUs768.jpg">
+          <source media="(max-width: 320px)" srcset="img/aboutUs320.jpg">
           <img class="aboutUs-img" src="img/aboutUs.jpg" alt="work">
         </picture>
         <div class="aboutUs-mainBlock-info">
@@ -108,7 +109,7 @@
   <footer>
     <section class="container footer-section">
       <div class="footer-block-1">
-        <img src="img/Логотип-2.png" alt="logo">
+        <img class="footer-logo" src="img/Логотип-2.png" alt="logo">
         <nav>
           <ul class="footer-list">
             <li class="footer-item"><a class="footer-link" href="#">О нас</a></li>
@@ -132,9 +133,12 @@
           <input class="footer-input" type="text" placeholder="Фамилия, имя и отчество*">
           <input class="footer-input" type="email" placeholder="E-mail*">
           <textarea class="footer-input message" name="message" id="#" rows="5" placeholder="Сообщение" ></textarea>
-          <div>
+          <div class="footer-buttons">
             <button class="btn footer-btn">Отправить данные</button>
+            <span>
             <input type="checkbox" id="footer-checkbox"><label class="footer-checkbox-lable" for="footer-checkbox">Согласен на обработку данных</label>
+
+            </span>
           </div>
         </form>
       </div>
