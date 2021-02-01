@@ -74,7 +74,40 @@ strong {
   -webkit-transform: rotate(45deg) translate(-8px, -8px);
   transform: rotate(45deg) translate(-8px, -8px);
 }
+.burger-menu {
+  display: none;
+  position: absolute;
+  width: 100%;
+  z-index: 20;
+  background-color: #fff;
+}
+.burger-list {
+  padding-left: 30px;
+}
+.burger-item {
+  margin-bottom: 13px;
+}
+.burger-active {
+  display: block;
+}
 
+
+
+.tab-content {
+  display: none;
+}
+.tab-content-active {
+  display: flex;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #ffffff !important;
+}
+.swiper-pagination-bullet {
+  width: 15px !important;
+  height: 15px !important;
+  margin-right: 20px !important;
+}
 
 header {
   background: #FFFFFF;
@@ -130,7 +163,6 @@ header {
   box-sizing: border-box;
   height: 620px;
   padding: 103px 850px 91px 80px;
-  /* background-image: url(../img/Карусель/Карусель-1.jpg); */
   background-repeat: no-repeat;
 }
 .slide-1 {
@@ -145,6 +177,7 @@ header {
 }
 .hero-absolut {
   position: absolute;
+  z-index: 10;
 }
 
 
@@ -306,6 +339,19 @@ header {
   border-top: 1px solid #CACACA;
   border-bottom: 1px solid #CACACA;
 }
+.ui-icon {
+  display: none !important;
+}
+.ui-state-active {
+  border-bottom: none;
+}
+.ui-state-active button {
+  transition: transform 0.5s;
+  transform: rotate(-90deg);
+}
+#accordion p {
+  margin-bottom: 30px;
+}
 .question-item strong {
   display: flex;
   align-items: center;
@@ -438,7 +484,6 @@ footer {
   .hero {
     height: 666px;
     padding: 160px 100px 114px 44px;
-    background-image: url(../img/Карусель/Pict1-1024.jpg);
   }
   .hero-heading {
     font-size: 60px;
@@ -532,7 +577,7 @@ footer {
   }
   .hero {
     height: 700px;
-    padding: 191px 0 114px 49px;
+    padding: 100px 5px 114px 49px;
   }
 
 
@@ -600,6 +645,9 @@ footer {
   }
 }
 @media (max-width: 320px) {
+  .swiper-pagination-bullet {
+    display: none !important;
+  }
   .container {
     width: 290px !important;
   }
@@ -635,6 +683,9 @@ footer {
   }
   .header-search {
     display: none;
+  }
+  .swiper-container {
+    height: 300px;
   }
   .hero {
     width: 100%;

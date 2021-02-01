@@ -16,20 +16,42 @@
 
   <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> -->
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#accordion" ).accordion();
+  } );
+  </script>
 </head>
 <body>
   <header>
     <div class="container header">
 
-      <div class="burger" onclick="myFunction(this)">
+      <div class="burger" onclick="myFunction(this, '.burger-menu')">
         <div class="bar1"></div>
         <div class="bar2"></div>
         <div class="bar3"></div>
+        <div class="burger-menu">
+          <ul class="burger-list">
+            <li class="burger-item"><a href="#">О нас</a></li>
+            <li class="burger-item"><a href="#">Проекты</a></li>
+            <li class="burger-item"><a href="#">Этапы</a></li>
+            <li class="burger-item"><a href="#">Отзывы</a></li>
+            <li class="burger-item"><a href="#">Контакты</a></li>
+          </ul>
+        </div>
       </div>
 
+
+
       <script>
-      function myFunction(x) {
+      function myFunction(x, y) {
         x.classList.toggle("change");
+        let burgerActive = document.querySelector(y)
+        burgerActive.classList.toggle("burger-active");
       }
       </script>
 
@@ -47,24 +69,21 @@
     </div>
   </header>
   <section class="container swiper-container">
+    <div class="hero hero-absolut">
+      <h1 class="hero-heading">Проектные решения любой сложности</h1>
+      <div class="hero-description">Есть над чем задуматься: базовые сценарии поведения пользователей и по сей день остаются уделом проектантов</div>
+      <a class="btn btn-hero" href="#">Заказать расчёт</a>
+    </div>
     <div class="swiper-wrapper">
-      <div class="hero hero-absolut">
-        <h1 class="hero-heading">Проектные решения любой сложности</h1>
-        <div class="hero-description">Есть над чем задуматься: базовые сценарии поведения пользователей и по сей день остаются уделом проектантов</div>
-        <a class="btn btn-hero" href="#">Заказать расчёт</a>
-      </div>
       <div class="hero swiper-slide slide-1">
       </div>
       <div class="hero swiper-slide slide-2">
       </div>
       <div class="hero swiper-slide slide-3">
       </div>
-
-      <!-- If we need pagination -->
-    <div class="swiper-pagination"></div>
-
     </div>
-
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
   </section>
   <section class="aboutUs container">
     <h2>О нас</h2>
@@ -97,34 +116,63 @@
   <section class="container">
     <h2 class="work-heading">Как мы работаем</h2>
     <div class="work-buttons">
-      <div class="work-btn">1 шаг</div>
-      <div class="work-btn">2 шаг</div>
-      <div class="work-btn">3 шаг</div>
-      <div class="work-btn">4 шаг</div>
+      <div class="work-btn" data-path="one">1 шаг</div>
+      <div class="work-btn" data-path="two">2 шаг</div>
+      <div class="work-btn" data-path="three">3 шаг</div>
+      <div class="work-btn" data-path="four">4 шаг</div>
     </div>
     <div class="work-info">
       <div class="work-advice">
+       <div class="tab-content tab-content-active" data-target="one">
         <p class="work-text"><strong>Проводим консультацию</strong><br>
           Влечет за собой процесс внедрения и модернизации приоритизации разума над эмоциями. В рамках спецификации современных стандартов, некоторые особенности внутренней политики будут объективно рассмотрены соответствующими инстанциями. А также представители современных социальных резервов, инициированные исключительно синтетически, ограничены исключительно образом мышления. Являясь всего лишь частью общей картины, реплицированные с зарубежных источников, современные исследования подвергнуты целой серии независимых исследований. Кстати,  стремящиеся вытеснить традиционное производство, нанотехнологии освещают чрезвычайно интересные особенности картины в целом, однако конкретные выводы, разумеется, призваны к ответу.</p>
+          <picture>
+            <source media="(max-width: 768px)" srcset="img/advice768.jpg">
+            <source media="(max-width: 1024px)" srcset="img/advice2.jpg">
+            <img class="work-img" src="img/advice.jpg" alt="">
+          </picture>
+       </div>
+       <div class="tab-content" data-target="two">
+        <p class="work-text"><strong>Составляем смету</strong><br>
+          Внедрения и модернизации приоритизации разума над эмоциями. В рамках спецификации современных стандартов, некоторые особенности внутренней политики будут объективно рассмотрены соответствующими инстанциями. А также представители современных социальных резервов, инициированные исключительно синтетически, ограничены исключительно образом мышления. Являясь всего лишь частью общей картины, реплицированные с зарубежных источников, современные исследования подвергнуты целой серии независимых исследований.</p>
+          <img class="work-img" src="img/advice-2.jpg" alt="">
+       </div>
+       <div class="tab-content" data-target="three">
+        <p class="work-text"><strong>Привлекаем подрядчиков</strong><br>
+          Идейные соображения высшего порядка, а также новая модель организационной деятельности требует анализа прогресса профессионального сообщества. Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта: высококачественный прототип будущего проекта напрямую зависит от дальнейших направлений развития. Разнообразный и богатый опыт говорит нам, что новая модель организационной деятельности говорит о возможностях системы массового участия. Принимая во внимание показатели успешности, постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет выполнить важные задания по разработке прогресса профессионального сообщества.</p>
+          <img class="work-img" src="img/advice-3.jpg" alt="">
+       </div>
+       <div class="tab-content" data-target="four">
+        <p class="work-text"><strong>Инспектируем все этапы работ</strong><br>
+          Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта: высококачественный прототип будущего проекта напрямую зависит от дальнейших направлений развития. Разнообразный и богатый опыт говорит нам, что новая модель организационной деятельности говорит о возможностях системы массового участия. Принимая во внимание показатели успешности, постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет.</p>
+          <img class="work-img" src="img/advice-4.jpg" alt="">
+       </div>
           <a class="btn btn-work-more" href="#">Подробнее</a>
           <a class="btn btn-work-contract" href="#">Договор</a>
       </div>
-      <picture>
-        <source media="(max-width: 768px)" srcset="img/advice768.jpg">
-        <source media="(max-width: 1024px)" srcset="img/advice2.jpg">
-        <img class="work-img" src="img/advice.jpg" alt="">
-      </picture>
+
+
     </div>
   </section>
   <section class="container question-section">
     <h2 class="question-heading">Часто задаваемые вопросы</h2>
-    <ul class="question-list">
-      <li class="question-item"><strong>Из чего формируется конечная стоимость проекта?</strong><button class="question-item-btn"><img src="img/icon/plus.svg" alt="+"></button></li>
-      <li class="question-item"><strong>У меня есть свой проект. Сможем ли мы его доработать <span class="grey">/</span> реализовать?</strong><button class="question-item-btn"><img src="img/icon/plus.svg" alt="+"></button></li>
-      <li class="question-item"><strong>Я выбираю между разными компаниями. В чём ваше отличие?</strong><button class="question-item-btn"><img src="img/icon/plus.svg" alt="+"></button> </li>
-      <li class="question-item"><strong>Могу ли я делегировать вам работу<span class="grey"> / </span>согласование с подрядчиком <span class="grey">/</span> организацией?</strong><button class="question-item-btn"><img src="img/icon/plus.svg" alt=""></button></li>
-      <li class="question-item"><strong>Могу ли я вернуть деньги на каком-либо из этапов работ?</strong><button class="question-item-btn"><img src="img/icon/plus.svg" alt="+"></button></li>
-    </ul>
+    <div id="accordion">
+      <div class="question-item"><strong>Из чего формируется конечная стоимость проекта?</strong><button class="question-item-btn"><img src="img/icon/plus.svg" alt="+"></button></div>
+      <p>Являясь всего лишь частью общей картины, непосредственные участники технического прогресса призывают нас к новым свершениям, которые, в свою очередь, должны быть своевременно верифицированы. Но высококачественный прототип будущего проекта является качественно новой ступенью первоочередных требований. А ещё некоторые особенности внутренней политики, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали. И нет сомнений, что явные признаки победы институционализации призывают нас к новым свершениям, которые, в свою очередь, должны быть указаны как претенденты на роль ключевых факторов.
+        Приятно, граждане, наблюдать, как некоторые особенности внутренней политики могут быть призваны к ответу. Явные признаки победы институционализации набирают популярность среди определенных слоев населения, а значит, должны быть объединены в целые кластеры себе подобных. Банальные, но неопровержимые выводы, а также многие известные личности призывают нас к новым свершениям, которые, в свою очередь, должны быть представлены в исключительно положительном свете. </p>
+
+      <div class="question-item"><strong>У меня есть свой проект. Сможем ли мы его доработать <span class="grey">/</span> реализовать?</strong><button class="question-item-btn"><img src="img/icon/plus.svg" alt="+"></button></div>
+      <p>Какой-то текст</p>
+
+      <div class="question-item"><strong>Я выбираю между разными компаниями. В чём ваше отличие?</strong><button class="question-item-btn"><img src="img/icon/plus.svg" alt="+"></button></div>
+      <p>Какой-то текст</p>
+
+      <div class="question-item"><strong>Могу ли я делегировать вам работу<span class="grey"> / </span>согласование с подрядчиком <span class="grey">/</span> организацией?</strong><button class="question-item-btn"><img src="img/icon/plus.svg" alt="+"></button></div>
+      <p>Какой-то текст</p>
+
+      <div class="question-item"><strong>Могу ли я вернуть деньги на каком-либо из этапов работ?</strong><button class="question-item-btn"><img src="img/icon/plus.svg" alt="+"></button></div>
+      <p>Какой-то текст</p>
+    </div>
   </section>
   <footer>
     <section class="container footer-section">
@@ -174,25 +222,24 @@
 
   <script>
     var mySwiper = new Swiper('.swiper-container', {
-  // Optional parameters
-  loop: true,
+    // Optional parameters
+    loop: true,
 
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
-  },
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
 
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
 
-  // And if we need scrollbar
-  scrollbar: {
-    el: '.swiper-scrollbar',
-  },
-})
+    })
+
   </script>
+  <script src="tabs.js"></script>
 </body>
 </html>
