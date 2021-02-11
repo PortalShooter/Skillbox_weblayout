@@ -1,0 +1,66 @@
+
+body {
+  padding: 70px 92px;
+  background: #424242;
+  font-family: 'Open Sans', sans-serif;
+}
+/* Checkbox */
+.checkbox {
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+  background: #FFFFFF;
+  border-radius: 10px;
+  padding: 21px 21px 30px 30px;
+}
+.label-check {
+  cursor: pointer;
+  position: relative;
+  padding-left: 24px;
+  padding-bottom: 20px;
+}
+.check {
+  display: none;
+}
+.check + span {
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 14px;
+  height: 14px;
+  border: 1px solid #CCB26E;
+  border-radius: 3px;
+}
+.check + span::before {
+  content: url(img/check-mark.svg);
+  position: absolute;
+  top: -9px;
+  left: 3px;
+  opacity: 0;
+  transition: opacity .2s ease-in-out;
+}
+.check:checked + span::before {
+  opacity: 1;
+}
+/* Select */
+.choices {
+  width: 176px;
+  background: #FFFFFF;
+  border-radius: 10px;
+  font-size: 14px;
+}
+.choices__inner {
+  width: 176px;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.choices[data-type*=select-one]:after {
+  content: url(./img/Select.svg);
+  border-style: none;
+  right: 26px;
+  top: 33%;
+}
+.is-open {
+  border: 1px solid #CCB26E;
+}

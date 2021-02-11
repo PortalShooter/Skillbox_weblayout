@@ -96,7 +96,6 @@ button {
 }
 
 
-
 .tab-content {
   display: none;
 }
@@ -617,7 +616,7 @@ footer {
     justify-content: space-between;
     margin-bottom: 20px;
   }
-  .work-info {
+  .tab-content-active {
     flex-direction: column;
   }
   .work-advice {
@@ -845,8 +844,9 @@ footer {
   .footer-block-2 {
     margin-bottom: 23px;
   }
-  .footer-icon {
+  .footer-icon img {
     width: 34px;
+    height: 34px;
   }
   .footer-icon:not(:last-child){
     margin-right: 14px;
