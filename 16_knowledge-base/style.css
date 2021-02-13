@@ -1,8 +1,15 @@
 
 body {
-  padding: 70px 92px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px 20px;
+  flex-wrap: wrap;
   background: #424242;
   font-family: 'Open Sans', sans-serif;
+}
+body > div {
+  margin-bottom: 20px;
 }
 /* Checkbox */
 .checkbox {
@@ -45,22 +52,146 @@ body {
 /* Select */
 .choices {
   width: 176px;
+  margin-right: 40px;
   background: #FFFFFF;
   border-radius: 10px;
   font-size: 14px;
+
 }
 .choices__inner {
-  width: 176px;
   box-sizing: border-box;
-  border-radius: 10px;
+  border: 2px solid #CCB26E !important;
+  border-radius: 10px !important;
 }
-
 .choices[data-type*=select-one]:after {
   content: url(./img/Select.svg);
+  width: 11px;
+  height: 11px;
   border-style: none;
   right: 26px;
   top: 33%;
+  transition: transform 0.5s;
 }
-.is-open {
-  border: 1px solid #CCB26E;
+.choices[data-type*=select-one].is-open:after {
+  content: url(./img/Select2.svg);
+  margin-top: 0 !important;
+}
+.choices__list--dropdown {
+  width: inherit;
+  box-sizing: border-box;
+  word-break: normal;
+
+}
+.choices__item {
+  opacity: 1;
+}
+.choices__item--choice {
+  padding-bottom: 20px;
+}
+.is-active {
+  border: 2px solid #CCB26E !important;
+  border-radius: 0 0 10px 10px !important;
+  position: absolute;
+  top: 8px;
+}
+.choices__list {
+  z-index: -1 !important;
+}
+/* Map */
+.ymaps-2-1-78-ground-pane {
+  filter: grayscale(1);
+	-ms-filter: grayscale(1);
+	-webkit-filter: grayscale(1);
+	-moz-filter: grayscale(1);
+	-o-filter: grayscale(1);
+}
+/* Scrollbar */
+.customScroll {
+  width: 399px;
+  height: 280px;
+  padding: 20px 30px 0 29px;
+  background: #fff;
+}
+.simplebar-scrollbar::before {
+  height: 70px;
+  background: #CCB26E;
+  opacity: 1 !important;
+}
+/* Form */
+.form {
+  width: 440px;
+  padding: 21px 30px 39px 30px;
+  background: #000000;
+  border-radius: 10px;
+  font-family: 'Roboto', sans-serif;
+}
+.form-text {
+  padding-left: 20px;
+  padding-bottom: 7px;
+  color: #FF5C00;
+  font-size: 12px;
+  line-height: 14px;
+}
+.input {
+  width: 100%;
+  height: 60px;
+  margin-bottom: 14px;
+  padding-left: 20px;
+  border: 1px solid #FF5C00;
+  box-sizing: border-box;
+  border-radius: 10px;
+  font-size: 16px;
+}
+.form-btn {
+  margin-top: 25px;
+  padding: 19px 53px;
+  color: #FFFFFF;
+  background: #FF5C00;
+  border-radius: 10px;
+  border: none;
+  font-size: 20px;
+}
+/* Tooltip */
+.tooltip {
+  position: relative;
+  width: 375px;
+  padding: 10px 75px 10px 29px;
+  background: #FFFFFF;
+  line-height: 170%;
+}
+.marker {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  right: 140px;
+  bottom: 33px;
+  background-image: url(/img/tooltip1.png);
+}
+.popup {
+  display: none;
+  position: absolute;
+  right: 70px;
+  bottom: 60px;
+  padding: 2px 15px;
+  background: #666666;
+  color: white;
+  font-size: 12px;
+}
+.popup::after {
+  content: '';
+  width: 0;
+	height: 0;
+  position: absolute;
+  bottom: -6px;
+  left: 47%;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 10px solid #666666;
+}
+.marker:hover {
+  cursor: pointer;
+  background-image: url(/img/tooltip2.png)
+}
+.marker:hover + .popup {
+  display: block;
 }
