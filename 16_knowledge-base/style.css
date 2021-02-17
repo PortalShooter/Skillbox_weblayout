@@ -50,10 +50,13 @@ body > div {
   opacity: 1;
 }
 /* Select */
+#choices--selectCustom-item-choice-5 {
+  display: none;
+}
 .choices {
+  background-image: none !important;
   width: 176px;
   margin-right: 40px;
-  background: #FFFFFF;
   border-radius: 10px;
   font-size: 14px;
 
@@ -62,41 +65,50 @@ body > div {
   box-sizing: border-box;
   border: 2px solid #CCB26E !important;
   border-radius: 10px !important;
-}
-.choices[data-type*=select-one]:after {
-  content: url(./img/Select.svg);
-  width: 11px;
-  height: 11px;
-  border-style: none;
-  right: 26px;
-  top: 33%;
-  transition: transform 0.5s;
-}
-.choices[data-type*=select-one].is-open:after {
-  content: url(./img/Select2.svg);
-  margin-top: 0 !important;
-}
-.choices__list--dropdown {
-  width: inherit;
-  box-sizing: border-box;
-  word-break: normal;
+  background: #FFFFFF;
 
 }
-.choices__item {
-  opacity: 1;
+.choices__list {
+  width: 174px;
 }
+.choices__list--dropdown {
+  word-break: normal;
+  z-index: -1;
+  transform: translateY(-35px);
+}
+.choices__list--dropdown.is-active {
+  height: auto;
+  border-radius: 10px;
+  border: 1px solid #CCB26E;
+}
+.choices__placeholder {
+  opacity: 1;
+  padding-left: 10px;
+  padding-top: 2%;
+}
+
 .choices__item--choice {
   padding-bottom: 20px;
 }
-.is-active {
-  border: 2px solid #CCB26E !important;
-  border-radius: 0 0 10px 10px !important;
+.choices[data-type*=select-one]:after {
+  content: '';
+  height: 8px;
+  width: 8px;
+  border-style: solid;
+  border-color:   transparent transparent #333333 #333333;
+  border-width: 1px;
   position: absolute;
-  top: 8px;
+  right: 11.5px;
+  margin-top: -8px;
+  pointer-events: none;
+  transform: rotate(-45deg);
 }
-.choices__list {
-  z-index: -1 !important;
+
+.choices[data-type*=select-one].is-open:after {
+  border-color: #CCB26E #CCB26E transparent transparent;
+  margin-top: -4px;
 }
+
 /* Map */
 .ymaps-2-1-78-ground-pane {
   filter: grayscale(1);
@@ -165,7 +177,7 @@ body > div {
   position: absolute;
   right: 140px;
   bottom: 33px;
-  background-image: url(/img/tooltip1.png);
+  background-image: url(img/tooltip1.png);
 }
 .popup {
   display: none;
@@ -190,7 +202,7 @@ body > div {
 }
 .marker:hover {
   cursor: pointer;
-  background-image: url(/img/tooltip2.png)
+  background-image: url(img/tooltip2.png)
 }
 .marker:hover + .popup {
   display: block;
